@@ -18,6 +18,7 @@ public class ProductController {
     private CommandGateway commandGateway;
     private QueryGateway queryGateway;
 
+
     public ProductController(CommandGateway commandGateway,
                              QueryGateway queryGateway){
         this.commandGateway = commandGateway;
@@ -41,4 +42,5 @@ public class ProductController {
     public CompletableFuture<List<ProductSummary>> getProducts(){
         return queryGateway.query(new GetProductsQuery(), ResponseTypes.multipleInstancesOf(ProductSummary.class));
     }
+
 }
