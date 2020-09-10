@@ -44,6 +44,8 @@
 - 8024: Http Port
 - 8124: gRPC Port
 
+![](.README/26c5d401.png)
+
 ### Read DB: Postgres Docker Container
 
     docker run -e POSTGRES_PASSWORD=admin123 -e POSTGRES_USER=admin -p 5432:5432 postgres
