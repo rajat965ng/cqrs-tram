@@ -1,3 +1,17 @@
+# CQRS: (Command Query And Responsibility Segregation)
+## Right way of doing DDD (Domain Driven Development)
+
+- CQRS enforce segregation of read and write data model.
+- CQRS is derived from CQS (Command Query Separation), the term mentioned for the first time in a book by Bertrand Mayer (Object Oriented Software Construction).
+- It's main idea is split application majorly in two parts:
+  - Query
+    - These are the read models that are going to fetch data, without modifying the state.
+  - Command
+    - These are the write models that modify the state. 
+- The domain object has to implement functions for fetching and modifying the state. Each function can either read or write but not both.
+
+![](.README/cqrs.png)
+
 ### Run Axon Server Docker Container
 
     docker run -p 8024:8024 -p 8124:8124 axoniq/axonserver
